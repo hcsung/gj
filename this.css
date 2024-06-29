@@ -1,0 +1,244 @@
+@import url('https://www.hcsung.com/style.css');
+
+:root {
+    --black-ll: 0, 0%, 8%;
+    --black: 0, 0%, 16%;
+    --black-hl: 0, 0%, 24%;
+
+    --white-ll: 0, 0%, 92%;
+    --white: 0, 0%, 84%;
+    --white-hl: 0, 0%, 76%;
+
+    --red: 15, 100%, 30%;
+
+    --green-hl: 75, 100%, 45%;
+    --green: 75, 100%, 40%;
+    --green-ll: 80, 100%, 30%;
+
+    --orange-hl: 30, 81%, 59%;
+    --orange: 30, 81%, 54%;
+    --orange-ll: 30, 81%, 49%;
+
+    --yellow: 45, 100%, 50%;
+
+    --highlight: var(--orange-hl);
+    --normal: var(--orange);
+    --lowlight: var(--orange-ll);
+
+    --color-font: hsl(var(--white));
+    --color-hl: hsl(var(--white-ll));
+    --color-ll: hsl(var(--white-hl));
+    --color-dim: hsla(var(--white-hl), 30%);
+    --color-bright: hsla(var(--white-ll));
+    --color-bg: hsl(var(--black-ll));
+    --color-bg1: hsl(var(--back1));
+    --color-hover: hsl(var(--yellow));
+}
+
+:root.swap {
+    --color-font: hsl(var(--black));
+    --color-hl: hsl(var(--black-ll));
+    --color-ll: hsl(var(--black-hl));
+    --color-dim: hsl(var(--lowlight), 30%);
+    --color-bright: hsla(var(--normal), 90%);
+    --color-bg: hsl(var(--white-ll));
+    --color-bg1: hsl(var(--white));
+    --color-hover: hsl(var(--normal));
+}
+
+.floating-blocks {
+    background: var(--color-bg);
+}
+
+body {
+    color: var(--color-font);
+    font-family: Arial, sans-serif;
+    line-height: 1.5em;
+    opacity: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--color-hl);
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+}
+
+a {
+    color: var(--color-font);
+}
+
+a:hover {
+    color: var(--color-hover);
+}
+
+table {
+    font-size: 11pt;
+}
+
+table.modifiable {
+    margin-left: -2.5rem;
+}
+
+tr:nth-child(n + 2) {
+    opacity: .7;
+}
+
+tr:hover {
+    opacity: 1;
+}
+
+tr:hover>td {
+    border-bottom-color: var(--color-bright);
+}
+
+th,
+td {
+    text-align: left;
+    vertical-align: middle;
+    padding: .4em .8em;
+}
+
+th {
+    background-color: var(--color-ll);
+    color: var(--color-bg);
+}
+
+th:first-child {
+    background: none;
+    padding: 0;
+    padding-right: .4em;
+}
+
+th:nth-child(2) {
+    border-top-left-radius: .9em;
+    border-bottom-left-radius: .9em;
+}
+
+th:last-child {
+    border-top-right-radius: .9em;
+    border-bottom-right-radius: .9em;
+}
+
+td {
+    border-bottom: solid 1px var(--color-dim);
+}
+
+td:first-child {
+    border: none;
+    padding: 0;
+}
+
+table .icon {
+    filter: invert(1);
+}
+
+table.hourly {
+    font-family: monospace;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.button {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--color-dim);
+    margin: 0 3px;
+}
+
+.menu .button {
+    margin-right: 16px;
+}
+
+.icon.light {
+    background-image: url("icons/light.svg"), url("icons/dark.svg");
+}
+
+.icon.upload {
+    background-image: url("icons/upload.svg");
+}
+
+.icon.download {
+    background-image: url("icons/download.svg");
+}
+
+.icon.lock {
+    background-image: url("icons/lock.svg"), url("icons/unlock.svg");
+}
+
+.icon.add {
+    background-image: url("icons/add.svg");
+}
+
+.icon.delete {
+    background-image: url("icons/delete.svg");
+}
+
+#content {
+    margin-bottom: 2em;
+}
+
+table .button {
+    display: grid;
+    border-radius: 0;
+    background-color: unset;
+    width: 2rem;
+    height: 2rem;
+    opacity: .9;
+}
+
+#face {
+    max-width: 82%;
+    margin: 0 auto;
+}
+
+#footer {
+    font-size: 8pt;
+    font-weight: normal;
+    text-align: center;
+    opacity: .9;
+}
+
+#footer span::before {
+    content: "- ";
+    margin: 0 .2em;
+}
+
+#notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: hsl(var(--red));
+    border-radius: 2em;
+    margin: 2em;
+    padding: .5em 1.5em;
+    opacity: .9;
+    font-weight: bold;
+}
+
+.locked .control {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.locked tr.control {
+    display: none;
+}
+
+.swap h1 {
+    color: hsl(var(--lowlight));
+}
+
+.swap table .icon {
+    filter: initial;
+}
+
+.swap th {
+    background-color: hsl(var(--lowlight));
+}

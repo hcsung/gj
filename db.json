@@ -1,0 +1,60 @@
+{
+    "db": {
+        "Type": [ "Bug", "Feature", "Q&A" ],
+        "State": [ "Open", "Resolved", "Rejected" ],
+        "Priority": [ "Low", "Medium", "High", "Urgent" ],
+        "Stage": [ "ED", "QC", "MP", "EOL" ],
+        "Platform": [
+            {
+                "Name": "Ant",
+                "Code": "GJ1024",
+                "Year": "2023",
+                "Note": ""
+            },
+            {
+                "Name": "Bee",
+                "Code": "GJ2048",
+                "Year": "2024",
+                "Note": ""
+            },
+            {
+                "Name": "Cricket",
+                "Code": "GJ4096",
+                "Year": "2025",
+                "Note": ""
+            }
+        ],
+        "Client": [
+            {
+                "Name": "Myna",
+                "Code": "tc01"
+            },
+            {
+                "Name": "Robin",
+                "Code": "tc02"
+            },
+            {
+                "Name": "Turkey",
+                "Code": "tc03"
+            }
+        ],
+        "Project": [
+            {
+                "Name": "MyLaptop",
+                "Platform": "Ant",
+                "Client": "Myna",
+                "Year": "2023",
+                "Stage": "MP",
+                "Note": "Flagship Laptop"
+            },
+            {
+                "Name": "RB33",
+                "Platform": "Bee",
+                "Client": "Robin",
+                "Year": "2024",
+                "Stage": "QC",
+                "Note": "Flagship watch"
+            }
+        ]
+    }
+}

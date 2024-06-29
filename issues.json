@@ -1,0 +1,16 @@
+{
+    "Issues": [
+        {
+            "ID": "GJ00012345",
+            "Type": "Bug",
+            "Priority": "Urgent",
+            "Project": "RB33",
+            "State": "Open",
+            "Title": "Power consumption is too high in suspend mode",
+            "Created": "2024-06-15",
+            "Start": "2024-06-27",
+            "End": "",
+            "Note": ""
+        }
+    ]
+}
